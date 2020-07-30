@@ -1,0 +1,12 @@
+## Interface: 11305
+## Author: Lemmiwinks
+## Version: 0.0.1
+## Title: |cffff8000WeaveUI|r
+## Notes: Basic setup for modifications of Tukui externally.
+## Dependencies: Tukui
+## X-Tukui-ProjectID: 30
+## X-Tukui-ProjectFolders: WeaveUI
+
+WeaveUI.lua
+Modules/example.lua
+Modules/theme.lua
