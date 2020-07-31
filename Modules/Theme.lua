@@ -1,5 +1,5 @@
-local T, C, L = select(2, ...):unpack()
-
+local T, C, L = Tukui:unpack()
+local WUIThemeName = ...
 --------------------------------------------------------------------------------
 -- Setup
 
@@ -12,26 +12,19 @@ local Themes = T["Themes"]
 
 --------------------------------------------------------------------------------
 -- Theme Defnitions
-
-local WUIThemeName = "WeaveUI"
 local WUITheme = CreateFrame("Frame")
 
 function WUITheme:SwitchActionBars()
 	-- Grab Panels
-	-- Save LOcal with points from Bar 4
-	-- Save LOcal with points from Bar 2
+	-- Save Local with points from Bar 4
+	-- Save Local with points from Bar 2
 	-- Edit Bar 4
 	-- Panels.ActionBar4 = A4
 end
 
 function WUITheme:OnEvent(event)
   if (C.General.Themes.Value == WUIThemeName) then
-    print("Activated Theme" .. WUIThemeName)
-		-- self:SetupChat()
-		-- self:AddLines()
-		-- self:MoveXPBars()
-		-- self:MoveTooltip()
-		-- self:MoveDataTextTooltip()
+		self:SwitchActionBars()
 	end
 end
 

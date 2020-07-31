@@ -7,6 +7,9 @@
 ## X-Tukui-ProjectID: 30
 ## X-Tukui-ProjectFolders: WeaveUI
 
+embeds.xml
+
 WeaveUI.lua
-Modules/example.lua
-Modules/theme.lua
+Modules/Example.lua
+Modules/Theme.lua
+Modules/Media.lua
