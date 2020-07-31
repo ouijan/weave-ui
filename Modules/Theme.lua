@@ -1,20 +1,13 @@
 local T, C, L = Tukui:unpack()
-local WUIThemeName = ...
---------------------------------------------------------------------------------
--- Setup
-
-if not T.Themes then
-	T.Themes = {}
-end
 
 local Themes = T["Themes"]
 
+------------------------------------------------
+-- Theme Defnition
+------------------------------------------------
+local WTheme = CreateFrame("Frame")
 
---------------------------------------------------------------------------------
--- Theme Defnitions
-local WUITheme = CreateFrame("Frame")
-
-function WUITheme:SwitchActionBars()
+function WTheme:SwitchActionBars()
 	-- Grab Panels
 	-- Save Local with points from Bar 4
 	-- Save Local with points from Bar 2
@@ -22,20 +15,20 @@ function WUITheme:SwitchActionBars()
 	-- Panels.ActionBar4 = A4
 end
 
-function WUITheme:OnEvent(event)
-  if (C.General.Themes.Value == WUIThemeName) then
+function WTheme:OnEvent(event)
+  if (C.General.Themes.Value == "WeaveUI") then
 		self:SwitchActionBars()
 	end
 end
 
 
---------------------------------------------------------------------------------
+------------------------------------------------
 -- Register Theme
+------------------------------------------------
+WTheme:RegisterEvent("PLAYER_LOGIN")
+WTheme:SetScript("OnEvent", WTheme.OnEvent)
 
-WUITheme:RegisterEvent("PLAYER_LOGIN")
-WUITheme:SetScript("OnEvent", WUITheme.OnEvent)
-
-Themes.WUITheme = WUITheme
+Themes.WTheme = WTheme
 
 -- Add to Theme Options
-C.General.Themes.Options[WUIThemeName] = WUIThemeName
+C.General.Themes.Options["WeaveUI"] = "WeaveUI"

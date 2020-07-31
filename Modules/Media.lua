@@ -3,7 +3,9 @@ local T, C, L = Tukui:unpack()
 local TukuiMedia = T["Media"]
 local LSM = LibStub("LibSharedMedia-3.0")
 
+------------------------------------------------
 -- Fonts
+------------------------------------------------
 local WeaveFonts = {
   ["Lilita One"] = [[Interface/AddOns/WeaveUI/Media/LilitaOne-Regular.ttf]],
   ["Luckiest Guy"] = [[Interface/AddOns/WeaveUI/Media/LuckiestGuy-Regular.ttf]],

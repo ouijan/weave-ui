@@ -9,7 +9,8 @@
 
 embeds.xml
 
-WeaveUI.lua
-Modules/Example.lua
-Modules/Theme.lua
+Locales/enUS.lua
+
 Modules/Media.lua
+Modules/Config.lua
+Modules/Theme.lua
