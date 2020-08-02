@@ -1,3 +1,4 @@
+local Weave = select(2, ...)
 local T, C, L = Tukui:unpack()
 
 ------------------------------------------------
@@ -16,8 +17,8 @@ local WeaveConfigUI = function(self)
 
   Window:CreateSection("General")
   Window:CreateSwitch("WeaveUI", "Enable", "Example Switch")
-  
-  
+
+
   Window:CreateSection("Theme")
   Window:CreateSwitch("WeaveUI", "Enable", "Example Switch")
 

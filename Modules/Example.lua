@@ -1,4 +1,4 @@
-local T, C, L = select(2, ...):unpack()
+local T, C, L = Tukui:unpack()
 
 local Panels = T.Panels
 

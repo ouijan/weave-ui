@@ -13,4 +13,5 @@ Locales/enUS.lua
 
 Modules/Media.lua
 Modules/Config.lua
+Modules/ActionBars.lua
 Modules/Theme.lua
