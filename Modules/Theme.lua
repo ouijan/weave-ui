@@ -1,11 +1,38 @@
 local Weave = select(2, ...)
 local T, C, L = Tukui:unpack()
 
-Weave.Theme = CreateFrame("Frame")
-local Theme = Weave.Theme
+local Theme = CreateFrame("Frame")
+Weave.Theme = Theme
 
-function Theme:SetConfigDefaults()
-	-- print("SetConfigDefaults")
+local function inspect(item)
+	for i, v in pairs(item) do
+		print(i, v)
+	end
+end
+
+function Theme:SetRightPanel()
+	local frame = T.Panels.RightChatBG
+	local left = frame:GetLeft();
+	local right = frame:GetRight();
+	local top = frame:GetTop();
+	local bottom = frame:GetBottom();
+	print(top, right, bottom, left)
+	local window = Details:GetWindow(1)
+	print(window.top, window.right, window.bottom, window.left)
+end
+
+function Theme:SetupChat()
+	-- T.SlashHandler("/tukui chat reset")
+	
+	-- Wow Settings
+	-- rename "other" to "details
+	-- change "details" chat tab to show nothing
+
+	-- Details
+	-- Details: Chat Tab Embed -> Enabled
+	-- Details: Chat Tab Embed -> Tab Name "Details"
+	-- Details: Set Skin = "Safe Skin Legion Beta (or create our own)
+		-- Background Alpha 0
 end
 
 function Theme:SwitchActionBars()
@@ -16,11 +43,11 @@ end
 
 function Theme:OnEvent(event)
 	if (C.General.Themes.Value == "WeaveUI") then
-		self:SetConfigDefaults()
 		-- self:SwitchActionBars()
+		-- self:SetRightPanel()
+		-- self:SetupChat()
 	end
 end
-
 
 ------------------------------------------------
 -- Register Theme
