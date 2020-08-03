@@ -11,7 +11,8 @@ embeds.xml
 
 Locales/enUS.lua
 
-Modules/Media.lua
 Modules/Config.lua
+Modules/Media.lua
+Modules/Commands.lua
 Modules/ActionBars.lua
 Modules/Theme.lua
