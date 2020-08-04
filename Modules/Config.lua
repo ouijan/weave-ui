@@ -48,13 +48,8 @@ C.WeaveUI = {
 ------------------------------------------------
 local WeaveConfigUI = function(self)
   local Window = self:CreateWindow("WeaveUI")
-
   Window:CreateSection("General")
   Window:CreateSwitch("WeaveUI", "TellTarget", "Enable /tt command")
-
-  Window:CreateSection("Theme")
-  Window:CreateSwitch("WeaveUI", "Enable", "Example Switch")
-
 end
 
 T.GUI:AddWidgets(WeaveConfigUI)
