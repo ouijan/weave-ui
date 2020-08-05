@@ -4,6 +4,10 @@ local T, C, L = Tukui:unpack()
 ------------------------------------------------
 -- Default Overrides
 ------------------------------------------------
+C.ActionBars.HideBackdrop = true
+
+C.Bags.ButtonSize = 35
+
 C.General.UseGlobal = true
 C.General.UIScale = 0.7
 C.General.HideShadows = true

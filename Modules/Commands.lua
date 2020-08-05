@@ -11,5 +11,7 @@ function Commands:TellTarget(message)
 end
 
 local Console = LibStub("AceConsole-3.0")
-Console:RegisterChatCommand('tt', Commands:TellTarget)
+Console:RegisterChatCommand('tt', function(message)
+  Commands:TellTarget(message)
+end)
 
