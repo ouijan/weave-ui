@@ -2,8 +2,9 @@
 ## Author: Lemmiwinks
 ## Version: 0.0.1
 ## Title: |cffff8000WeaveUI|r
-## Notes: Basic setup for modifications of Tukui externally.
+## Notes: Tukui UI Theme and Utils
 ## Dependencies: Tukui
+## SavedVariables: WeaveUI_DB
 ## X-Tukui-ProjectID: 30
 ## X-Tukui-ProjectFolders: WeaveUI
 
@@ -14,5 +15,6 @@ Locales/enUS.lua
 Modules/Config.lua
 Modules/Media.lua
 Modules/Commands.lua
-Modules/ActionBars.lua
 Modules/Theme.lua
+
+WeaveUI.lua

@@ -4,19 +4,48 @@ local T, C, L = Tukui:unpack()
 local TukuiMedia = T["Media"]
 local LSM = LibStub("LibSharedMedia-3.0")
 
+local Media = {}
+Weave.Media = Media
+
 ------------------------------------------------
 -- Fonts
 ------------------------------------------------
-Weave.Fonts = {
+Media.Fonts = {
   ["Lilita One"] = [[Interface/AddOns/WeaveUI/Media/LilitaOne-Regular.ttf]],
   ["Luckiest Guy"] = [[Interface/AddOns/WeaveUI/Media/LuckiestGuy-Regular.ttf]],
   ["OpenSans"] = [[Interface/AddOns/WeaveUI/Media/OpenSans-Regular.ttf]],
 }
 
-for fontName, fontPath in pairs(Weave.Fonts) do
-  LSM:Register("font", fontName, fontPath)
-  CreateFont(fontName):SetFont(fontPath, 12)
-  TukuiMedia:RegisterFont(fontName, fontName)
+function Media:RegisterFonts()
+  for name, path in pairs(self.Fonts) do
+    LSM:Register("font", name, path)
+    CreateFont(name):SetFont(path, 12)
+    TukuiMedia:RegisterFont(name, name)
+  end
 end
 
--- TukuiMedia:RegisterTexture("Gloss", "Interface\\AddOns\\WeaveUI\\Media\\Gloss.tga")
+------------------------------------------------
+-- Textures
+------------------------------------------------
+Media.Textures = {
+  ["Gloss"] = [[Interface/AddOns/WeaveUI/Media/Gloss.tga]]
+}
+
+function Media:RegisterTextures()
+  for name, path in pairs(self.Textures) do
+    LSM:Register("statusbar", name, path)
+    TukuiMedia:RegisterTexture(name, path)
+  end
+end
+
+
+------------------------------------------------
+-- OnInit
+------------------------------------------------
+
+function Media:OnInit()
+  self:RegisterFonts()
+  self:RegisterTextures()
+end
+
+Media:OnInit()
